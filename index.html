@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento select múltiple</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 1.25rem;
+        }
+
+        .flex-container {
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            border: 4px solid black;
+            padding: 1em;
+        }
+
+        .flex-item {
+            width: 45%;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+        }
+
+        select, input[type="button"], p {
+            width: 100%;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">
+            <select id="select1" multiple size="5">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+            </select>
+            <input id="botonMover1" type="button" value="Mover">
+        </div>
+        <div  class="flex-item">
+            <select id="select2" multiple size="5">
+            </select>
+            <input id="botonMover2" type="button" value="Mover">
+        </div>
+        <p>Usa el botón de debajo de cada select para mover las opciones seleccionadas</p>
+    </div>
+    <br>
+    <div class="flex-container">
+        <div class="flex-item">
+            <select id="select3" multiple size="5">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+            </select>
+        </div>
+        <div  class="flex-item">
+            <select id="select4" multiple size="5">
+            </select>
+        </div>
+        <p>Haz click en una opción para moverla</p>
+    </div>
+</body>
+<script src="movimiento_select_multiple.js"></script>
+</html>
